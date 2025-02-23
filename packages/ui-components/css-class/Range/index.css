@@ -1,0 +1,15 @@
+.range {
+  @apply w-full h-2 rounded-lg appearance-none cursor-pointer disabled:cursor-not-allowed bg-gray-200 dark:bg-gray-700 accent-primary dark:accent-blue-400;
+
+  &::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 rounded-full bg-primary dark:bg-blue-400 cursor-pointer;
+  }
+
+  &::-moz-range-thumb {
+    @apply w-4 h-4 rounded-full bg-primary dark:bg-blue-400 cursor-pointer border-0;
+  }
+}
+
+.range-icon {
+  @apply h-5 w-5 text-gray-600 dark:text-gray-400;
+}

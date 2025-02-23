@@ -1,0 +1,133 @@
+.tooltip {
+  @apply relative inline-block;
+
+  &:not([class*=tooltip-]) .tooltip-popover {
+    @apply bottom-full mb-2 left-1/2 -translate-x-1/2;
+
+    &::after {
+      @apply bottom-[-5px] left-1/2 -translate-x-1/2;
+    }
+  }
+
+  &:hover,
+  &.tooltip-open {
+    .tooltip-popover {
+      @apply visible opacity-100;
+    }
+  }
+
+  &:not(.no-arrow) {
+
+    &:hover,
+    &.tooltip-open {
+      .tooltip-popover::after {
+        display: block;
+      }
+    }
+  }
+}
+
+.tooltip-popover {
+  @apply z-[100] absolute px-2 py-1 text-sm text-white bg-gray-800 rounded-sm transition-all duration-200 invisible opacity-0 whitespace-nowrap;
+
+  &::after {
+    content: '';
+    @apply absolute w-[10px] h-[10px] bg-gray-800 rotate-[45deg] transition-[inherit] duration-[inherit] ease-[inherit];
+  }
+
+  &.tooltip-wrap {
+    white-space: normal;
+  }
+}
+
+/* 位置变体 */
+.tooltip-top {
+  .tooltip-popover {
+    @apply bottom-full mb-2 left-1/2 -translate-x-1/2;
+
+    &::after {
+      @apply bottom-[-5px] left-1/2 -translate-x-1/2;
+    }
+  }
+}
+
+.tooltip-bottom {
+  .tooltip-popover {
+    @apply top-full mt-2 left-1/2 -translate-x-1/2;
+
+    &::after {
+      @apply top-[-5px] left-1/2 -translate-x-1/2;
+    }
+  }
+}
+
+.tooltip-left {
+  .tooltip-popover {
+    @apply right-full mr-2 top-1/2 -translate-y-1/2;
+
+    &::after {
+      @apply right-[-5px] top-1/2 -translate-y-1/2;
+    }
+  }
+}
+
+.tooltip-right {
+  .tooltip-popover {
+    @apply left-full ml-2 top-1/2 -translate-y-1/2;
+
+    &::after {
+      @apply left-[-5px] top-1/2 -translate-y-1/2;
+    }
+  }
+}
+
+/* 主题变体 */
+.tooltip-primary {
+  .tooltip-popover {
+    @apply bg-primary;
+
+    &::after {
+      @apply bg-primary;
+    }
+  }
+}
+
+.tooltip-success {
+  .tooltip-popover {
+    @apply bg-green-500;
+
+    &::after {
+      @apply bg-green-500;
+    }
+  }
+}
+
+.tooltip-warning {
+  .tooltip-popover {
+    @apply bg-yellow-500;
+
+    &::after {
+      @apply bg-yellow-500;
+    }
+  }
+}
+
+.tooltip-danger {
+  .tooltip-popover {
+    @apply bg-red-500;
+
+    &::after {
+      @apply bg-red-500;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

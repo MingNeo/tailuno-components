@@ -1,0 +1,99 @@
+.button {
+  @apply py-2 px-4 text-[14px] leading-[14px] rounded-[6px] border border-[#ddd] border-solid cursor-pointer transition dark:border-[#ffffff0d];
+
+  &+& {
+    margin-left: 8px;
+  }
+
+  &:not(:disabled) {
+    @apply hover:text-white hover:bg-[#ddd] dark:hover:bg-white/5 active:scale-95;
+  }
+
+  &:disabled {
+    @apply opacity-60 cursor-not-allowed;
+  }
+
+  &.button-primary {
+    @apply bg-transparent text-primary border-primary dark:text-white;
+
+    &:not(:disabled) {
+      @apply hover:bg-primary hover:text-white;
+    }
+  }
+
+  &.button-success {
+    @apply bg-transparent text-green-500 border-green-500;
+
+    &:not(:disabled) {
+      @apply hover:bg-green-600 hover:border-green-600 hover:text-white;
+    }
+  }
+
+  &.button-warning {
+    @apply bg-transparent text-yellow-500 border-yellow-500;
+
+    &:not(:disabled) {
+      @apply hover:bg-yellow-600 hover:border-yellow-600 hover:text-white;
+    }
+  }
+
+  &.button-danger {
+    @apply bg-transparent text-red-500 border-red-500;
+
+    &:not(:disabled) {
+      @apply hover:bg-red-600 hover:border-red-600 hover:text-white;
+    }
+  }
+
+  &.button-plain {
+    @apply border-transparent bg-gray-100 dark:bg-white/5;
+
+    &:not(:disabled) {
+      @apply hover:text-white hover:bg-primary;
+    }
+
+    &.button-primary {
+      @apply bg-primary text-white border-primary;
+
+      &:not(:disabled) {
+        @apply hover:opacity-70 hover:text-white;
+      }
+    }
+
+    &.button-success {
+      @apply bg-green-500 text-white border-green-500;
+
+      &:not(:disabled) {
+        @apply hover:bg-green-600 hover:border-green-600 hover:text-white;
+      }
+    }
+
+    &.button-warning {
+      @apply bg-yellow-500 text-white border-yellow-500;
+
+      &:not(:disabled) {
+        @apply hover:bg-yellow-600 hover:border-yellow-600 hover:text-white;
+      }
+    }
+
+    &.button-danger {
+      @apply bg-red-500 text-white border-red-500;
+
+      &:not(:disabled) {
+        @apply hover:bg-red-600 hover:border-red-600 hover:text-white;
+      }
+    }
+  }
+
+  &.button-round {
+    @apply rounded-full;
+  }
+
+  &.button-small {
+    @apply py-1 px-2;
+  }
+
+  &.button-large {
+    @apply py-3 px-5;
+  }
+}

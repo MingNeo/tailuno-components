@@ -1,0 +1,15 @@
+.avatar-wrapper {
+  @apply relative block;
+
+  .avatar {
+    @apply mx-auto;
+  }
+}
+
+.avatar {
+  @apply object-cover rounded-full h-16 w-16;
+}
+
+.avatar-badge {
+  @apply absolute top-0 right-0 h-4 w-4 my-1 border-solid border-2 border-white rounded-full bg-green-400 z-[2];
+}

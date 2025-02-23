@@ -1,0 +1,91 @@
+.alert-container {
+  @apply flex flex-col gap-4;
+}
+
+.alert {
+  @apply flex rounded-md p-4 text-sm;
+
+  .alert-icon {
+    @apply shrink-0;
+
+    svg {
+      @apply h-5 w-5;
+    }
+  }
+
+  .alert-message {
+    @apply ml-3 flex-1 font-medium;
+  }
+
+  .alert-action {
+    @apply mr-3 whitespace-nowrap font-medium hover:text-blue-600;
+  }
+
+  .alert-close {
+    @apply -mx-1.5 -my-1.5;
+
+    .close-button {
+      @apply inline-flex rounded-md p-1.5 text-gray-400 hover:bg-white/60 focus:outline-none;
+
+      svg {
+        @apply h-5 w-5;
+      }
+    }
+  }
+
+  /* 信息提示样式 */
+  &.alert-info {
+    @apply bg-blue-50;
+
+    .alert-icon svg {
+      @apply text-blue-400;
+    }
+
+    .alert-message {
+      @apply text-blue-700;
+    }
+
+    .alert-action {
+      @apply text-blue-700;
+    }
+  }
+
+  /* 成功提示样式 */
+  &.alert-success {
+    @apply bg-green-50;
+
+    .alert-icon svg {
+      @apply text-green-400;
+    }
+
+    .alert-message {
+      @apply text-green-800;
+    }
+  }
+
+  /* 警告提示样式 */
+  &.alert-warning {
+    @apply bg-yellow-50;
+
+    .alert-icon svg {
+      @apply text-yellow-400;
+    }
+
+    .alert-message {
+      @apply text-yellow-800;
+    }
+  }
+
+  /* 错误提示样式 */
+  &.alert-error {
+    @apply bg-red-50;
+
+    .alert-icon svg {
+      @apply text-red-400;
+    }
+
+    .alert-message {
+      @apply text-red-800;
+    }
+  }
+}
