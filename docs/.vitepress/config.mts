@@ -1,4 +1,5 @@
 import path from 'node:path'
+import process from 'node:process'
 import { defineConfig } from 'vitepress'
 // import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -10,6 +11,8 @@ export default defineConfig({
   description: 'custom components',
   // 设置构建输出目录
   outDir: '../dist',
+  // 根据环境变量判断是否添加 base 路径
+  base: process.env.NODE_ENV === 'production' ? '/tailuno-components/' : '/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
