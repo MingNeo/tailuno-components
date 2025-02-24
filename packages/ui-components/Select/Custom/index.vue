@@ -1,6 +1,7 @@
 <script setup>
-
-import './index.js'
+if (!import.meta.env.SSR) {
+  import('./index.js')
+}
 </script>
 
 <template>

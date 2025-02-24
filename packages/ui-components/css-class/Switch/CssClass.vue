@@ -14,7 +14,7 @@
     <input type="checkbox" class="switch" disabled>
 
     <label>带文字</label>
-    <div class="flex items-center gap-3">
+    <div class="switch-wrapper">
       <input type="checkbox" class="switch">
       <span class="switch-label">开启状态</span>
     </div>

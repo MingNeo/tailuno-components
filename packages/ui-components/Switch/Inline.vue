@@ -14,9 +14,9 @@
     <input type="checkbox" disabled class="appearance-none w-[52px] h-7 rounded-full bg-gray-200 cursor-not-allowed opacity-50 relative before:content-[''] before:absolute before:w-5 before:h-5 before:rounded-full before:top-1 before:left-1 before:bg-white">
 
     <label>带文字</label>
-    <label for="switch">
+    <label class="flex items-center gap-3" for="switch">
       <input name="switch" type="checkbox" class="appearance-none w-[52px] h-7 rounded-full vertical-middle bg-gray-300 cursor-pointer checked:bg-primary relative transition-colors ease-in-out duration-200 before:content-[''] before:absolute before:w-5 before:h-5 before:rounded-full before:top-1 before:left-1 before:bg-white before:transition-all before:duration-200 checked:before:translate-x-6">
-      开启状态
+      <span class="text-sm font-medium">开启状态</span>
     </label>
     <!-- #endregion snippet -->
   </div>

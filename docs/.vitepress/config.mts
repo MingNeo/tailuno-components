@@ -8,6 +8,8 @@ import Components from 'unplugin-vue-components/vite'
 export default defineConfig({
   title: 'TailUno Component',
   description: 'custom components',
+  // 设置构建输出目录
+  outDir: '../dist',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -64,7 +66,7 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        'ui-components': `${path.resolve(__dirname, '../../packages/ui-components')}/`,
+        'ui-components': `${path.resolve(new URL('.', import.meta.url).pathname, '../../packages/ui-components')}/`,
       },
     },
     plugins: [

@@ -26,7 +26,7 @@
 ::: code-group
 <<< ../../packages/ui-components/Select/Custom/index.vue#snippet{html}[html]
 <<< ../../packages/ui-components/Select/Custom/index.js
-<<< ../../packages/ui-components/Select/Inline/Custom.vue[完整Vue版本]
+<<< ../../packages/ui-components/Select/Inline/custom.vue[完整Vue版本]
 :::
 
 ## CSS 类用法
