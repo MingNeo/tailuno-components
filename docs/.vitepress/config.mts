@@ -1,9 +1,9 @@
 import path from 'node:path'
-import process from 'node:process'
 import { defineConfig } from 'vitepress'
 // import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import demoPlugin from '../../packages/markdown-it-demo-plugin/index.js'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,6 +13,7 @@ export default defineConfig({
   outDir: '../dist',
   // 根据环境变量判断是否添加 base 路径
   base: process.env.NODE_ENV === 'production' ? '/tailuno-components/' : '/',
+  // base: '/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -81,5 +82,10 @@ export default defineConfig({
         resolvers: [],
       }),
     ],
+  },
+  markdown: {
+    config: (md) => {
+      md.use(demoPlugin)
+    }
   },
 })

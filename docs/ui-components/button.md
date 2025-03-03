@@ -4,25 +4,16 @@
 
 <script setup>
   import InlineButton from 'ui-components/Button/Inline.vue'
-  import CssButton from 'ui-components/css-class/Button/CssClass.vue'
+  // import CssButton from 'ui-components/css-class/Button/CssClass.vue'
 </script>
 
 ## 行内tailwind/unocss用法
 样式全在组件行内的tailwind/unocss class中，直接复制对应的代码使用即可
-::: raw
+
+<!-- ::: section title=示例 class="space-y-4 p-4" -->
 <InlineButton />
-:::
+<!-- ::: -->
+
 ::: details 查看代码
 <<< ../../packages/ui-components/Button/Inline.vue#snippet{html}
-:::
-
-## css 类用法
-复制下面的index.css的class定义，并粘贴到组件或全局中使用
-::: raw
-<CssButton />
-:::
-::: details 查看代码
-::: code-group
-<<< ../../packages/ui-components/css-class/Button/CssClass.vue#snippet{html}[html]
-<<< ../../packages/ui-components/css-class/Button/index.css
 :::

@@ -146,15 +146,7 @@
       危险按钮
     </button>
 
-    <div class="flex items-center gap-2 mb-4">
-      <!-- 圆角按钮：基础按钮添加 rounded-full 类名即可实现圆角按钮 -->
-      <button
-        class="py-2 px-4 text-[14px] leading-[14px] rounded-[6px] border border-solid cursor-pointer transition bg-transparent text-primary border-primary
-    disabled:opacity-60 disabled:!cursor-not-allowed hover:[&:not(:disabled)]:text-white hover:[&:not(:disabled)]:bg-primary active:[&:not(:disabled)]:scale-95"
-      >
-        主要按钮
-      </button>
-
+    <div class="flex items-center gap-2">
       <!-- 图标按钮 -->
       <button
         class="py-2 px-2 text-[14px] leading-[14px] rounded-[6px] border border-[#ddd] border-solid cursor-pointer transition bg-transparent text-gray-600
@@ -163,7 +155,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z"/></svg>
       </button>
 
-      <!-- 图标 + 文字 按钮：基础按钮增加flex items-center justify-center gap-1 类名来同时使用 文字和图标 -->
+      <!-- 文字图标按钮 -->
       <button
         class="py-2 px-4 text-[14px] leading-[14px] rounded-[6px] border border-[#ddd] border-solid cursor-pointer transition bg-transparent text-gray-600 flex items-center justify-center gap-1
      disabled:opacity-60 disabled:!cursor-not-allowed hover:[&:not(:disabled)]:text-primary hover:[&:not(:disabled)]:border-primary active:[&:not(:disabled)]:scale-95"
@@ -172,7 +164,7 @@
         带图标
       </button>
 
-      <!-- 小尺寸：修改py、 px、 text、 leading类名以设置不同按钮尺寸 -->
+      <!-- 小尺寸 -->
       <button
         class="py-1 px-2 text-[12px] leading-[12px] rounded-[6px] border border-[#ddd] border-solid cursor-pointer transition bg-transparent text-gray-600
      disabled:opacity-60 disabled:!cursor-not-allowed hover:[&:not(:disabled)]:text-primary hover:[&:not(:disabled)]:border-primary active:[&:not(:disabled)]:scale-95"
@@ -180,7 +172,7 @@
         小尺寸
       </button>
 
-      <!-- 大尺寸：修改py、 px、 text、 leading类名以设置不同按钮尺寸 -->
+      <!-- 大尺寸 -->
       <button
         class="py-3 px-5 text-[16px] leading-[16px] rounded-[6px] border border-[#ddd] border-solid cursor-pointer transition bg-transparent text-gray-600
      disabled:opacity-60 disabled:!cursor-not-allowed hover:[&:not(:disabled)]:text-primary hover:[&:not(:disabled)]:border-primary active:[&:not(:disabled)]:scale-95"

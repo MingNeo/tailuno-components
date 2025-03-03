@@ -15,9 +15,23 @@
 
 ::: details 查看代码
 <<< ../../packages/ui-components/Loading/Inline.vue#snippet{html}
+
+```css
+@keyframes dots {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+```
 :::
 
-## CSS 类用法
+<!-- ## CSS 类用法
 ::: raw
 使用预定义的CSS类来构建导航栏
 <CssLoading />
@@ -27,4 +41,4 @@
 ::: code-group
 <<< ../../packages/ui-components/css-class/Loading/CssClass.vue#snippet{html}[html]
 <<< ../../packages/ui-components/css-class/Loading/index.css
-:::
+::: -->

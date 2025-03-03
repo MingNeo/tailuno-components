@@ -11,6 +11,13 @@
       <div class="w-1 h-1 bg-primary rounded-full animate-ping animate-duration-1200 animate-delay-500" />
     </div>
 
+    <!-- Dots2 需要定义keyframes dots -->
+    <div class="flex space-x-2">
+      <div class="w-1.5 h-1.5 bg-primary rounded-full animate-[dots_1.4s_ease-in-out_infinite]" />
+      <div class="w-1.5 h-1.5 bg-primary rounded-full animate-[dots_1.4s_ease-in-out_infinite]" style="animation-delay: 200ms" />
+      <div class="w-1.5 h-1.5 bg-primary rounded-full animate-[dots_1.4s_ease-in-out_infinite]" style="animation-delay: 500ms" />
+    </div>
+
     <div class="animate-spin animate-duration-1500 text-blue-500">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
         <path fill="currentColor" fill-rule="evenodd" d="M11 16a2 2 0 1 1 0 4a2 2 0 0 1 0-4m-6.259-3a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m11.578.5a2 2 0 1 1 0 4a2 2 0 0 1 0-4M18.5 9.319a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3M2.5 6a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m15.286-.793a1 1 0 1 1 0 2a1 1 0 0 1 0-2M8 0a3 3 0 1 1 0 6a3 3 0 0 1 0-6m7.5 3a.5.5 0 1 1 0 1a.5.5 0 0 1 0-1" />
@@ -19,3 +26,18 @@
     <!-- #endregion snippet -->
   </div>
 </template>
+
+
+<style>
+@keyframes dots {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-200 dark:bg-gray-900 p-4 space-y-8">
     <!-- #region snippet -->
-    <nav class="relative max-w-6xl mx-auto md:flex bg-white dark:bg-gray-800 shadow-sm md:px-4">
+    <nav class="relative md:flex bg-white dark:bg-gray-800 shadow-sm md:px-4">
       <input type="checkbox" class="peer hidden" id="menu-toggle">
       <label for="menu-toggle" class="md:hidden block p-2 shadow-sm">
         ☰ 菜单
@@ -20,17 +20,7 @@
         </div>
       </div>
 
-      <!-- 右侧操作区 -->
       <div class="hidden md:flex items-center">
-        <button
-          class="p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300 dark:hover:text-gray-100">
-          <iconify-icon icon="carbon:search" class="text-[20px]" />
-        </button>
-        <button
-          class="ml-3 p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300 dark:hover:text-gray-100">
-          <iconify-icon icon="carbon:notification" class="text-[20px]" />
-        </button>
-        <!-- 用户头像 -->
         <div class="ml-3 relative group">
           <img class="w-8 h-8 rounded-full" src="https://picsum.photos/100/50" alt="avatar">
           <div class="hidden absolute right-0 w-56 origin-top-right z-[999] group-hover:block">
@@ -117,9 +107,7 @@
         </div>
       </div>
 
-      <!-- 右侧按钮组 -->
       <div class="hidden md:flex items-center ml-4 space-x-2">
-        <!-- 搜索框 -->
         <div class="relative flex-1 max-w-lg">
           <input type="text" placeholder="搜索..." class="w-full px-4 py-1 rounded-lg border dark:border-gray-600 bg-gray-100 dark:bg-gray-700
             focus:outline-none focus:ring-2 focus:ring-primary dark:text-gray-200 dark:placeholder-gray-400">

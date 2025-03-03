@@ -3,7 +3,7 @@
 响应式头像组件。
 
 <script setup>
-  import CssAvatar from 'ui-components/css-class/Avatar/CssClass.vue'
+  // import CssAvatar from 'ui-components/css-class/Avatar/CssClass.vue'
   import InlineAvatar from 'ui-components/Avatar/Inline.vue'
 </script>
 
@@ -16,7 +16,7 @@
 <<< ../../packages/ui-components/Avatar/Inline.vue#snippet{html}
 :::
 
-## CSS 类用法
+<!-- ## CSS 类用法
 ::: raw
 使用预定义的CSS类来构建导航栏
 <CssAvatar />
@@ -26,4 +26,4 @@
 ::: code-group
 <<< ../../packages/ui-components/css-class/Avatar/CssClass.vue#snippet{html}[html]
 <<< ../../packages/ui-components/css-class/Avatar/index.css
-:::
+::: -->

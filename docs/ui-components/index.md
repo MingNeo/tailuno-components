@@ -1,11 +1,18 @@
 # TailUno Component
 
+## 快速开始
+
+1. 确保项目已安装 Tailwind CSS 或 UnoCSS。
+
+2. 确保自己项目中配置了primary主题颜色，或自行替换组件代码中如text-primary、bg-primary等颜色为自定义颜色
+
 ## 使用
 直接复制组件代码到使用Tailwind / UnoCSS 的项目中即可使用
 
-## vscode 插件
+
+<!-- ## vscode 插件
 - 拖拽使用
-- [TailUno Component](https://marketplace.visualstudio.com/items?itemName=mingNeo.tailwind-uno-component)
+- [TailUno Component](https://marketplace.visualstudio.com/items?itemName=mingNeo.tailwind-uno-component) -->
 
 ## 组件列表
 
