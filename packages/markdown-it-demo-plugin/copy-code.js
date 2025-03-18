@@ -9,11 +9,13 @@ export function setupCopyCode() {
 
 function copyCode(e) {
   const el = e.target.closest('.demo-code-copy')
-  if (!el) return
+  if (!el)
+    return
 
   const parent = el.parentElement
   const code = parent.querySelector('code')
-  if (!code) return
+  if (!code)
+    return
 
   const text = code.textContent
 

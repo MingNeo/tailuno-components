@@ -1,19 +1,19 @@
 <template>
-  <div class="flex flex-col gap-4 items-start">
+  <div class="flex flex-col items-start gap-4">
     <!-- #region snippet -->
     <!-- Avatar -->
     <a href="#" class="relative block">
-      <img alt="profil" src="https://picsum.photos/50/50" class="mx-auto object-cover rounded-full h-16 w-16 shadow-sm">
+      <img alt="profil" src="https://picsum.photos/id/185/50/50" class="mx-auto size-16 rounded-full object-cover shadow-sm">
     </a>
     <!-- Avatar end -->
     <!-- Avatar with badge -->
     <a href="#" class="relative block">
-      <img alt="profil" src="https://picsum.photos/50/50" class="mx-auto object-cover rounded-full h-16 w-16 shadow-sm">
-      <span class="absolute top-0 right-0 h-4 w-4 my-1 border-solid border-2 border-white rounded-full bg-green-400 z-[2]" />
+      <img alt="profil" src="https://picsum.photos/id/185/50/50" class="mx-auto size-16 rounded-full object-cover shadow-sm">
+      <span class="absolute right-0 top-0 z-[2] my-1 size-4 rounded-full border-2 border-solid border-white bg-green-400" />
     </a>
     <a href="#" class="relative block">
-      <img alt="profil" src="https://picsum.photos/50/50" class="mx-auto object-cover rounded-full h-16 w-16 shadow-sm">
-      <span class="absolute bottom-0 right-0 h-4 w-4 border-solid border-2 border-white rounded-full bg-green-400 z-[2]" />
+      <img alt="profil" src="https://picsum.photos/id/185/50/50" class="mx-auto size-16 rounded-full object-cover shadow-sm">
+      <span class="absolute bottom-0 right-0 z-[2] size-4 rounded-full border-2 border-solid border-white bg-green-400" />
     </a>
     <!-- Avatar with badge end -->
   <!-- #endregion snippet -->

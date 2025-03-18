@@ -1,14 +1,12 @@
 # Input 输入框
 
-以下样式基于tailwind/unocss。primary颜色需在tailwind/unocss的theme中配置
-
 <script setup>
   import InlineInput from 'ui-components/Input/Inline.vue'
-  import CssInput from 'ui-components/css-class/Input/CssClass.vue'
+  import CssInput from 'ui-components-css/Input/CssClass.vue'
 </script>
 
 ## 行内tailwind/unocss用法
-样式全在组件行内的tailwind/unocss class中，直接复制对应的代码使用即可
+使用行内的tailwind/unocss样式构建，复制组件的代码即可使用
 <InlineInput />
 
 ::: details 查看代码
@@ -20,7 +18,7 @@
 <CssInput />
 ::: details 查看代码
 ::: code-group
-<<< ../../packages/ui-components/css-class/Input/CssClass.vue#snippet{html}[html]
+<<< ../../packages/ui-components-css/Input/CssClass.vue#snippet{html}[html]
 
-<<< ../../packages/ui-components/css-class/Input/index.css
+<<< ../../packages/ui-components-css/Input/index.css
 :::

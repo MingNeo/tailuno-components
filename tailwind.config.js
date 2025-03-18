@@ -3,11 +3,12 @@ module.exports = {
     './docs/**/*.{js,ts,vue,md}',
     './packages/**/*.{js,ts,vue,md,html}',
   ],
+  darkMode: 'selector',
   theme: {
     extend: {
       colors: {
-        primary: 'blue',
-      }
+        primary: '#0080ff',
+      },
     },
   },
   plugins: [],

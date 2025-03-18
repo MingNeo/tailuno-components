@@ -4,7 +4,7 @@ import container from 'markdown-it-container'
 // import path from 'path'
 // import { generateDemoHTML } from './generateDemoHtml'
 
-export const containerPlugin = (md: MarkdownIt) => {
+export function containerPlugin(md: MarkdownIt): void {
   md.use(container, 'section', {
     validate(params: string) {
       return !!params.trim().match(/^section\s*(.*)$/)
@@ -19,11 +19,11 @@ export const containerPlugin = (md: MarkdownIt) => {
       if (token.nesting === 1) {
         if (info?.[1]) {
           // 修改正则表达式以匹配带引号和不带引号的情况
-          const attrRegex = /([^=\s]+)\s*=\s*(?:["']([^"']+)["']|([^\s]+))/g
+          const attrRegex = /([^=\s]+)\s*=\s*(?:["']([^"']+)["']|(\S+))/g
           const matches = info[1].matchAll(attrRegex)
 
           for (const match of matches) {
-            const [full, key, quotedValue, unquotedValue] = match
+            const [_full, key, quotedValue, unquotedValue] = match
             const value = quotedValue || unquotedValue
             attrs[key] = value
           }
@@ -45,11 +45,12 @@ export const containerPlugin = (md: MarkdownIt) => {
         // }
         return `<div class="section-container vp-raw">
 <div class="section-container-title">${attrs.title}</div>
-<div class="section-preview ${attrs.class || ''}" style="${attrs.style || ""}">
+<div class="section-preview ${attrs.class || ''}" style="${attrs.style || ''}">
 `
-      } else {
+      }
+      else {
         return '</div>\n</div>\n'
       }
-    }
+    },
   })
 }

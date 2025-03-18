@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
 // import { createHighlighter, Highlighter } from 'shiki'
 import { containerPlugin } from './containers'
 import { generateDemoHTML } from './generateDemoHtml'
@@ -13,8 +14,7 @@ import { generateDemoHTML } from './generateDemoHtml'
 //   langs: ['html'],
 // }
 
-const demoPlugin = async (md, options = {}) => {
-
+async function demoPlugin(md, _options = {}) {
   // const pluginOptions = { ...defaultOptions, ...options }
 
   // 初始化 highlighter
@@ -34,12 +34,12 @@ const demoPlugin = async (md, options = {}) => {
 
     // 检查是否以 <demo 开头
     if (
-      state.src.charCodeAt(start) !== 0x3c || // <
-      state.src.charCodeAt(start + 1) !== 0x64 || // d
-      state.src.charCodeAt(start + 2) !== 0x65 || // e
-      state.src.charCodeAt(start + 3) !== 0x6d || // m
-      state.src.charCodeAt(start + 4) !== 0x6f || // o
-      state.src.charCodeAt(start + 5) !== 0x20
+      state.src.charCodeAt(start) !== 0x3C // <
+      || state.src.charCodeAt(start + 1) !== 0x64 // d
+      || state.src.charCodeAt(start + 2) !== 0x65 // e
+      || state.src.charCodeAt(start + 3) !== 0x6D // m
+      || state.src.charCodeAt(start + 4) !== 0x6F // o
+      || state.src.charCodeAt(start + 5) !== 0x20
     ) {
       // space
       return false
@@ -53,7 +53,8 @@ const demoPlugin = async (md, options = {}) => {
       attrs[key] = value
     })
 
-    if (silent) return true
+    if (silent)
+      return true
 
     try {
       const htmlPath = path.resolve(process.cwd(), attrs.src)
@@ -69,7 +70,8 @@ const demoPlugin = async (md, options = {}) => {
 
       state.line = startLine + 1
       return true
-    } catch (err) {
+    }
+    catch (err) {
       console.error('Failed to process demo:', err)
       return false
     }

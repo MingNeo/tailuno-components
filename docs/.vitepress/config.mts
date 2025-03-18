@@ -1,8 +1,9 @@
 import path from 'node:path'
-import { defineConfig } from 'vitepress'
+import process from 'node:process'
 // import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vitepress'
 import demoPlugin from '../../packages/markdown-it-demo-plugin/index.js'
 
 // https://vitepress.dev/reference/site-config
@@ -23,16 +24,14 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Tailwind/unocss UI组件',
+        text: 'UI 基础组件',
         items: [
           { text: '使用说明', link: '/ui-components/' },
           { text: 'Button 基础按钮', link: '/ui-components/button' },
           { text: 'Tooltip 文字提示', link: '/ui-components/tooltip' },
           // { text: 'Dialog 弹窗', link: '/ui-components/dialog' },
-          { text: 'Input 输入框', link: '/ui-components/input' },
-          { text: 'Select 选择器', link: '/ui-components/select' },
-          { text: 'Switch 开关', link: '/ui-components/switch' },
           { text: 'Dropdown 下拉菜单', link: '/ui-components/dropdown' },
+          { text: 'Group 组合', link: '/ui-components/group' },
           { text: 'Tabs 标签页', link: '/ui-components/tabs' },
           { text: 'Card 卡片', link: '/ui-components/card' },
           { text: 'Navbar 导航栏', link: '/ui-components/navbar' },
@@ -44,33 +43,50 @@ export default defineConfig({
           { text: 'Loading 加载中', link: '/ui-components/loading' },
           { text: 'Pagination 分页', link: '/ui-components/pagination' },
           { text: 'Divider 分隔线', link: '/ui-components/divider' },
-          { text: 'Checkbox 复选框', link: '/ui-components/checkbox' },
-          { text: 'Radio 单选框', link: '/ui-components/radio' },
-          { text: 'Range 滑块', link: '/ui-components/range' },
           { text: 'Modal 弹窗', link: '/ui-components/modal' },
           { text: 'Drawer 抽屉', link: '/ui-components/drawer' },
-          { text: 'ButtonGroup 按钮组', link: '/ui-components/buttonGroup' },
           { text: 'Steps 步骤条', link: '/ui-components/steps' },
-          { text: 'Rating 评分组件', link: '/ui-components/rating' },
           { text: 'Skeleton 骨架屏', link: '/ui-components/skeleton' },
           { text: 'Collapse 折叠面板', link: '/ui-components/collapse' },
           { text: 'Table 表格', link: '/ui-components/table' },
           { text: 'ChatBubble 聊天气泡', link: '/ui-components/chatBubble' },
           { text: 'Stat 统计数值', link: '/ui-components/stat' },
+          { text: 'List 列表', link: '/ui-components/list' },
+          { text: 'Stepper 步进器', link: '/ui-components/stepper' },
+          { text: 'Vote 投票组件', link: '/ui-components/vote' },
           // { text: 'Tag 标签', link: '/ui-components/tag' },
-          // { text: 'Upload 上传', link: '/ui-components/upload' },
+        ],
+      },
+      {
+        text: 'Form 表单组件',
+        items: [
+          { text: 'Input 输入框', link: '/ui-components/input' },
+          { text: 'Select 选择器', link: '/ui-components/select' },
+          { text: 'Switch 开关', link: '/ui-components/switch' },
+          { text: 'Checkbox 复选框', link: '/ui-components/checkbox' },
+          { text: 'Radio 单选框', link: '/ui-components/radio' },
+          { text: 'Range 滑块', link: '/ui-components/range' },
+          { text: 'Rating 评分组件', link: '/ui-components/rating' },
+          { text: 'Upload 上传', link: '/ui-components/upload' },
+        ],
+      },
+      {
+        text: 'Layout 布局组件',
+        items: [
+          { text: 'Login 登录', link: '/ui-components/login' },
         ],
       },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/mingNeo/tailwind-components' },
+      { icon: 'github', link: 'https://github.com/mingNeo/tailuno-components' },
     ],
   },
   vite: {
     resolve: {
       alias: {
         'ui-components': `${path.resolve(new URL('.', import.meta.url).pathname, '../../packages/ui-components')}/`,
+        'ui-components-css': `${path.resolve(new URL('.', import.meta.url).pathname, '../../packages/ui-components-css')}/`,
       },
     },
     plugins: [
@@ -86,6 +102,6 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(demoPlugin)
-    }
+    },
   },
 })

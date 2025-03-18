@@ -4,7 +4,7 @@
 
 <script setup>
   import InlineTable from 'ui-components/Table/Inline.vue'
-  // import CssTable from 'ui-components/css-class/Table/CssClass.vue'
+  // import CssTable from 'ui-components-css/Table/CssClass.vue'
 </script>
 
 ## 行内 Tailwind/UnoCSS 用法
@@ -19,12 +19,12 @@
 <!-- ## CSS 类用法
 
 ::: raw
-使用预定义的CSS类来构建导航栏
+使用预定义的CSS类。复制index.css的样式即可使用
 <CssTable />
 :::
 
 ::: details 查看代码
 ::: code-group
-<<< ../../packages/ui-components/css-class/Table/CssClass.vue#snippet{html}[html]
-<<< ../../packages/ui-components/css-class/Table/index.css
+<<< ../../packages/ui-components-css/Table/CssClass.vue#snippet{html}[html]
+<<< ../../packages/ui-components-css/Table/index.css
 ::: -->

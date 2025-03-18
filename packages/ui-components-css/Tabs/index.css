@@ -1,0 +1,82 @@
+.tabs {
+  display: flex;
+
+  &:not(.tabs-vertical) {
+    @apply space-x-1;
+  }
+}
+
+.tab-item {
+  @apply relative h-8 border-b-2 border-solid border-transparent px-1 text-sm font-medium text-gray-500 transition-colors;
+
+  &:hover,
+  &.active {
+    @apply text-primary border-primary;
+  }
+
+  &.tab-item-roundline {
+
+    &:hover,
+    &.active {
+      @apply border-transparent;
+
+      &::before {
+        content: '';
+        @apply absolute bottom-[-4px] left-0 w-full h-0.5 bg-primary rounded-full;
+      }
+    }
+  }
+
+  &.with-icon {
+    @apply flex items-center;
+
+    svg {
+      @apply w-5 h-5 mr-2;
+    }
+  }
+}
+
+.tabs-card {
+  @apply bg-gray-100 p-1.5 rounded-xl shadow-inner;
+
+  .tab-item {
+    @apply flex-1 px-4 text-sm font-medium rounded-lg border-none transition-all;
+
+    &::before {
+      @apply hidden;
+    }
+
+    &.active {
+      @apply bg-white shadow-sm text-gray-900;
+    }
+
+    &:hover:not(.active) {
+      @apply text-gray-700 bg-gray-50;
+    }
+  }
+}
+
+.tabs-plain {
+  .tab-item {
+    @apply px-4 border-none text-sm font-medium rounded-lg transition-all;
+
+    &::before {
+      @apply hidden;
+    }
+
+    &.active,
+    &:hover {
+      @apply bg-gray-100 text-gray-900;
+    }
+  }
+}
+
+.tabs-vertical {
+  @apply flex-col space-y-1 pr-2;
+
+  &:not(.tabs-plain) {
+    .tab-item {
+      @apply border-b-0 w-full border-r-2;
+    }
+  }
+}

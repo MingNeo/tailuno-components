@@ -1,12 +1,13 @@
-const fs = require('fs')
-const path = require('path')
+/* eslint-disable */
+const fs = require('node:fs')
+const path = require('node:path')
 const glob = require('glob')
 
 // 配置项
 const CONFIG = {
   componentsDir: path.resolve(__dirname, '../ui-components'),
   outputPath: path.resolve(__dirname, '../ui-components/config.json'),
-  pattern: '**/Inline.vue'
+  pattern: '**/Inline.vue',
 }
 
 // 主函数
@@ -44,7 +45,8 @@ async function generateComponents() {
         generateInlineComponent(componentDir, componentInfo)
 
         console.log(`组件 ${componentName} 处理成功`)
-      } catch (error) {
+      }
+      catch (error) {
         const componentName = path.basename(path.dirname(path.join(CONFIG.componentsDir, file)))
         console.error(`处理组件 ${componentName} 时出错:`, error.message)
         errors.push({ component: componentName, error: error.message })
@@ -66,8 +68,8 @@ async function generateComponents() {
         console.log(`- ${component}: ${error}`)
       })
     }
-
-  } catch (error) {
+  }
+  catch (error) {
     console.error('生成组件配置失败:', error)
   }
 }
@@ -79,7 +81,7 @@ function extractComponentInfo(code, componentName, componentDir) {
     if (!template) {
       throw new Error('模板内容为空')
     }
-    console.log('提取的template:', template.substring(0, 100) + '...')
+    console.log('提取的template:', `${template.substring(0, 100)}...`)
 
     // 提取组件描述
     const description = extractDescription(code) || componentName
@@ -110,24 +112,26 @@ function extractComponentInfo(code, componentName, componentDir) {
         fs.writeFileSync(
           path.join(examplesDir, fileName),
           example.template,
-          'utf-8'
+          'utf-8',
         )
 
         items[key] = {
           label: example.label || `${componentName} ${index + 1}`,
           description: example.description || '',
-          file: `examples/${fileName}`
+          file: `examples/${fileName}`,
         }
-      } catch (error) {
+      }
+      catch (error) {
         console.error(`保存示例 ${index + 1} 失败:`, error.message)
       }
     })
 
     return {
       label: description,
-      items
+      items,
     }
-  } catch (error) {
+  }
+  catch (error) {
     console.error(`提取组件 ${componentName} 信息失败:`, error.message)
     return null
   }
@@ -148,10 +152,10 @@ function extractExamples(template) {
   const examples = []
 
   // 匹配注释中的组件说明，忽略最外层div
-  const cleanTemplate = template.replace(/^<div[^>]*>([\s\S]*)<\/div>$/s, '$1').trim()
-  console.log('清理后的模板:', cleanTemplate.substring(0, 100) + '...')
+  const cleanTemplate = template.replace(/^<div[^>]*>([\s\S]*)<\/div>$/, '$1').trim()
+  console.log('清理后的模板:', `${cleanTemplate.substring(0, 100)}...`)
 
-  const commentRegex = /<!--\s*(.*?)\s*-->\s*([^]*?)(?=<!--|\s*$)/gs
+  const commentRegex = /<!--\s*(.*?)\s*-->\s*([\s\S]*?)(?=<!--|\s*$)/gs
   let match
 
   while ((match = commentRegex.exec(cleanTemplate)) !== null) {
@@ -171,7 +175,7 @@ function extractExamples(template) {
       const example = {
         name: comment.toLowerCase().replace(/\s+/g, '-'),
         label: comment,
-        template: template
+        template,
       }
       examples.push(example)
       console.log('添加示例:', example.name)
@@ -230,7 +234,8 @@ ${Object.entries(componentInfo.items).map(([key, item], index) => `import ${genN
     const filePath = path.join(componentDir, 'Inline.vue')
     console.log('生成Inline组件:', filePath)
     fs.writeFileSync(filePath, template, 'utf-8')
-  } catch (error) {
+  }
+  catch (error) {
     console.error('生成Inline组件失败:', error.message)
   }
 }
@@ -245,7 +250,8 @@ function writeConfig(config) {
 
     console.log('写入配置文件:', CONFIG.outputPath)
     fs.writeFileSync(CONFIG.outputPath, JSON.stringify(config, null, 2), 'utf-8')
-  } catch (error) {
+  }
+  catch (error) {
     console.error('写入配置文件失败:', error.message)
   }
 }
@@ -259,7 +265,8 @@ export const components = ${JSON.stringify(components, null, 2)}
 `
     console.log('生成索引文件:', indexPath)
     fs.writeFileSync(indexPath, indexContent, 'utf-8')
-  } catch (error) {
+  }
+  catch (error) {
     console.error('生成索引文件失败:', error.message)
   }
 }

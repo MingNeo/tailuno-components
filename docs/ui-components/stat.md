@@ -5,7 +5,7 @@ import InlineStat from 'ui-components/Stat/Inline.vue'
 </script>
 
 ## 行内 Tailwind/UnoCSS 用法
-使用行内Tailwind/UnoCSS类直接构建统计数值组件
+使用行内的tailwind/unocss样式构建，复制组件的代码即可使用
 ::: raw
 <InlineStat />
 :::

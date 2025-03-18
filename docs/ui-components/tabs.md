@@ -1,14 +1,12 @@
-# Tabs
-
-以下样式基于tailwind/unocss。primary颜色需在tailwind/unocss的theme中配置
+# Tabs 标签页
 
 <script setup>
   import InlineTabs from 'ui-components/Tabs/Inline.vue'
-  import CssTabs from 'ui-components/css-class/Tabs/CssClass.vue'
+  import CssTabs from 'ui-components-css/Tabs/CssClass.vue'
 </script>
 
 ## 行内tailwind/unocss用法
-样式全在组件行内的tailwind/unocss class中，直接复制对应的代码使用即可
+使用行内的tailwind/unocss样式构建，复制组件的代码即可使用
 <InlineTabs />
 
 ::: details 查看代码
@@ -20,7 +18,7 @@
 <CssTabs />
 ::: details 查看代码
 ::: code-group
-<<< ../../packages/ui-components/css-class/Tabs/CssClass.vue#snippet{html}[html]
+<<< ../../packages/ui-components-css/Tabs/CssClass.vue#snippet{html}[html]
 
-<<< ../../packages/ui-components/css-class/Tabs/index.css
+<<< ../../packages/ui-components-css/Tabs/index.css
 :::

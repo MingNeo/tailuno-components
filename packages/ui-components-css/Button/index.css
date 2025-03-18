@@ -1,0 +1,83 @@
+.btn {
+  @apply inline-flex items-center justify-center gap-1 py-2 px-4 text-[14px] leading-[14px] rounded-[6px] border border-gray-200 border-solid cursor-pointer transition dark:border-[#ffffff0d];
+
+  &+& {
+    margin-left: 8px;
+  }
+
+  &:not(:disabled) {
+    @apply hover:bg-gray-200 dark:hover:bg-white/5 active:scale-95;
+  }
+
+  &:disabled {
+    @apply opacity-60 cursor-not-allowed;
+  }
+
+  &.btn-primary {
+    @apply bg-transparent text-primary border-primary dark:text-white;
+
+    &:not(:disabled) {
+      @apply hover:bg-primary hover:text-white;
+    }
+  }
+
+  &.btn-success {
+    @apply bg-transparent text-green-500 border-green-500;
+
+    &:not(:disabled) {
+      @apply hover:bg-green-500 hover:border-green-500 hover:text-white;
+    }
+  }
+
+  &.btn-warning {
+    @apply bg-transparent text-yellow-500 border-yellow-500;
+
+    &:not(:disabled) {
+      @apply hover:bg-yellow-500 hover:border-yellow-500 hover:text-white;
+    }
+  }
+
+  &.btn-danger {
+    @apply bg-transparent text-red-500 border-red-500;
+
+    &:not(:disabled) {
+      @apply hover:bg-red-500 hover:border-red-500 hover:text-white;
+    }
+  }
+
+  &.btn-plain {
+    @apply border-transparent bg-gray-200 dark:bg-white/5;
+
+    &:not(:disabled) {
+      @apply hover:opacity-70;
+    }
+
+    &.btn-primary {
+      @apply bg-primary text-white border-primary;
+    }
+
+    &.btn-success {
+      @apply bg-green-500 text-white border-green-500;
+    }
+
+    &.btn-warning {
+      @apply bg-yellow-500 text-white border-yellow-500;
+    }
+
+    &.btn-danger {
+      @apply bg-red-500 text-white border-red-500;
+    }
+  }
+
+  &.btn-round {
+    @apply rounded-full;
+  }
+
+  &.btn-small {
+    @apply py-1 px-2;
+  }
+
+  &.btn-large {
+    @apply py-3 px-5;
+  }
+}

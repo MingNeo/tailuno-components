@@ -4,13 +4,13 @@
       基础进度条
     </p>
     <!-- 基础进度条 -->
-    <div class="w-full bg-gray-200 rounded-full h-2.5">
-      <div class="transition bg-blue-600 h-2.5 rounded-full" :style="{ width: '45%' }" />
+    <div class="h-2.5 w-full rounded-full bg-gray-200">
+      <div class="h-2.5 rounded-full bg-blue-600 transition" :style="{ width: '45%' }" />
     </div>
 
     <!-- 带数字进度条 -->
-    <div class="w-full bg-gray-200 rounded-full h-4">
-      <div class="transition bg-blue-600 h-4 rounded-full text-[10px] leading-4 text-white text-center px-1" :style="{ width: '45%' }">
+    <div class="h-4 w-full rounded-full bg-gray-200">
+      <div class="h-4 rounded-full bg-blue-600 px-1 text-center text-[10px] leading-4 text-white transition" :style="{ width: '45%' }">
         45%
       </div>
     </div>
@@ -20,12 +20,12 @@
     </p>
     <!-- 带标签进度条 -->
     <div>
-      <div class="flex justify-between mb-1">
+      <div class="mb-1 flex justify-between">
         <span class="text-sm font-medium text-blue-700">进度</span>
         <span class="text-sm font-medium text-blue-700">45%</span>
       </div>
-      <div class="w-full bg-gray-200 rounded-full h-2.5">
-        <div class="transition bg-blue-600 h-2.5 rounded-full" :style="{ width: '45%' }" />
+      <div class="h-2.5 w-full rounded-full bg-gray-200">
+        <div class="h-2.5 rounded-full bg-blue-600 transition" :style="{ width: '45%' }" />
       </div>
     </div>
 
@@ -34,7 +34,7 @@
     </p>
     <!-- 带步骤进度条 -->
     <div class="relative">
-      <div class="flex mb-2 justify-between text-xs font-medium">
+      <div class="mb-2 flex justify-between text-xs font-medium">
         <div class="w-1/3">
           申请
         </div>
@@ -45,8 +45,8 @@
           完成
         </div>
       </div>
-      <div class="w-full bg-gray-200 rounded-full h-1.5 mb-6">
-        <div class="transition bg-blue-600 h-1.5 rounded-full" :style="{ width: '50%' }" />
+      <div class="mb-6 h-2.5 w-full rounded-full bg-gray-200">
+        <div class="h-2.5 rounded-full bg-blue-600 transition" :style="{ width: '50%' }" />
       </div>
     </div>
   </div>

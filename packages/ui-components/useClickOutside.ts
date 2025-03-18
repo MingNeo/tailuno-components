@@ -1,4 +1,5 @@
-import { type Ref, onMounted, onUnmounted, ref } from 'vue'
+import type { Ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 type Handler = (event: MouseEvent) => void
 
@@ -10,10 +11,10 @@ type Handler = (event: MouseEvent) => void
 export function useClickOutside(
   handler: Handler,
   elementRef?: Ref<HTMLElement | undefined>,
-) {
+): { elementRef: Ref<HTMLElement | undefined> } {
   const _elementRef = ref<HTMLElement | undefined>(elementRef?.value)
 
-  const listener = (event: MouseEvent) => {
+  const listener = (event: MouseEvent): void => {
     // 如果元素不存在，或者点击的是元素内部，则不触发回调
     if (!_elementRef.value || _elementRef.value.contains(event.target as Node))
       return

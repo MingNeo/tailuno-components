@@ -14,28 +14,22 @@ function handleCloseModal() {
 
 <template>
   <!-- 基础模态框 -->
-  <button
-    class="px-4 py-2 bg-primary text-white rounded-sm hover:bg-blue-600"
-    @click="handleOpenModal"
-  >
+  <button class="rounded-sm bg-primary px-4 py-2 text-white hover:bg-blue-600"
+    @click="handleOpenModal">
     打开基础模态框
   </button>
 
-  <div
-    v-if="showModal"
-    class="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]"
-    @click="handleCloseModal"
-  >
-    <div class="bg-white rounded-lg w-[480px] py-6 shadow-sm [animation:modal-show_0.3s_ease_forwards]">
-      <div class="flex justify-between items-center mb-4 px-6">
+  <div v-if="showModal"
+    class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50"
+    @click="handleCloseModal">
+    <div class="w-[480px] rounded-lg bg-white py-6 shadow-sm [animation:modal-show_0.3s_ease_forwards]">
+      <div class="mb-4 flex items-center justify-between px-6">
         <h3 class="text-xl font-semibold">
           基础模态框
         </h3>
-        <button
-          class="text-gray-500 hover:text-gray-700"
-          @click="handleCloseModal"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="text-gray-500 hover:text-gray-700"
+          @click="handleCloseModal">
+          <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -44,16 +38,12 @@ function handleCloseModal() {
         这是一个基础的模态框示例，点击外部或关闭按钮可以关闭。
       </div>
       <div class="flex justify-end gap-2 px-6">
-        <button
-          class="px-4 py-2 border rounded-sm hover:bg-gray-100"
-          @click="handleCloseModal"
-        >
+        <button class="rounded-sm border px-4 py-2 hover:bg-gray-100"
+          @click="handleCloseModal">
           取消
         </button>
-        <button
-          class="px-4 py-2 bg-primary text-white rounded-sm hover:bg-blue-600"
-          @click="handleCloseModal"
-        >
+        <button class="rounded-sm bg-primary px-4 py-2 text-white hover:bg-blue-600"
+          @click="handleCloseModal">
           确定
         </button>
       </div>

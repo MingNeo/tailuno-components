@@ -7,11 +7,11 @@
 
 <script setup>
   import InlineSteps from 'ui-components/Steps/Inline.vue'
-  import CssSteps from 'ui-components/css-class/Steps/CssClass.vue'
+  import CssSteps from 'ui-components-css/Steps/CssClass.vue'
 </script>
 
 ## 行内tailwind/unocss用法
-样式全在组件行内的tailwind/unocss class中，直接复制对应的代码使用即可
+使用行内的tailwind/unocss样式构建，复制组件的代码即可使用
 <InlineSteps />
 
 ::: details 查看代码
@@ -24,7 +24,6 @@
 
 ::: details 查看代码
 ::: code-group
-<<< ../../packages/ui-components/css-class/Steps/CssClass.vue#snippet{html}[html]
-<<< ../../packages/ui-components/css-class/Steps/index.css
+<<< ../../packages/ui-components-css/Steps/CssClass.vue#snippet{html}[html]
+<<< ../../packages/ui-components-css/Steps/index.css
 ::: -->
-

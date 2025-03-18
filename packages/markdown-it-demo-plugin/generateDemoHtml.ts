@@ -1,5 +1,5 @@
 // 添加生成demo HTML的函数
-export const generateDemoHTML = (htmlContent, highlightedCode, attrs) => {
+export function generateDemoHTML(htmlContent, highlightedCode, attrs) {
   return `
 <div class="demo-wrapper vp-raw">
   <div class="demo-preview">

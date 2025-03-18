@@ -3,13 +3,13 @@
 响应式选择器组件。
 
 <script setup>
-  import CssSelect from 'ui-components/css-class/Select/CssClass.vue'
+  import CssSelect from 'ui-components-css/Select/CssClass.vue'
   import InlineSelectBase from 'ui-components/Select/Inline/base.vue'
   import InlineSelectCustom from 'ui-components/Select/Custom/index.vue'
 </script>
 
 ## 行内 Tailwind/UnoCSS 用法
-使用行内Tailwind/UnoCSS类直接构建选择器
+使用行内的tailwind/unocss样式构建，复制组件的代码即可使用
 ::: raw
 <InlineSelectBase />
 :::
@@ -31,12 +31,12 @@
 
 ## CSS 类用法
 ::: raw
-使用预定义的CSS类来构建选择器
+使用预定义的CSS类。复制index.css的样式即可使用
 <CssSelect />
 :::
 
 ::: details 查看代码
 ::: code-group
-<<< ../../packages/ui-components/css-class/Select/CssClass.vue#snippet{html}[html]
-<<< ../../packages/ui-components/css-class/Select/index.css
+<<< ../../packages/ui-components-css/Select/CssClass.vue#snippet{html}[html]
+<<< ../../packages/ui-components-css/Select/index.css
 :::

@@ -1,14 +1,16 @@
 # TailUno Component
 
-基于 Tailwind/UnoCSS 的 Vue 组件库,提供开箱即用的响应式 UI 组件。
+Tailwind/UnoCSS 的 纯UI组件库, 提供免安装的开箱即用的响应式 UI 组件。
 
 ## 特性
 
 - 🎨 基于 Tailwind/UnoCSS - 使用流行的原子化 CSS 框架
 - 📦 开箱即用 - 在线复制即可使用,无需安装及额外配置
 - 📱 响应式设计 - 适配各种屏幕尺寸
-- 🎈 轻量级 - 按需引入,不携带冗余代码
+- 🎈 轻量级 - 结构精简，拒绝冗余dom
 - 🎉 丰富组件 - 提供 30+ 常用 UI 组件
+- 🌈 黑暗模式适配
+- 😊 纯dom + tailwind/unocss，不含js(95%以上组件)。
 
 ## 快速开始
 

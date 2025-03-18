@@ -1,7 +1,8 @@
 // 全局事件处理器，引入此文件自动注册，只注册一次
 // 全局入口或组件中引入此文件皆可，不限html或vue或react
 function initGlobalSelectHandler() {
-  if (window._selectHandlerInitialized) return
+  if (window._selectHandlerInitialized)
+    return
 
   document.addEventListener('click', (e) => {
     const selectContainer = e.target.closest('.tailuno-select')
@@ -19,9 +20,10 @@ function initGlobalSelectHandler() {
       // 切换下拉框状态
       const isOpen = selectContainer.dataset.open === 'true'
       selectContainer.dataset.open = !isOpen
-    } else if (option) {
+    }
+    else if (option) {
       // 更新选中状态
-      selectContainer.querySelectorAll('.option-item').forEach(item => {
+      selectContainer.querySelectorAll('.option-item').forEach((item) => {
         item.removeAttribute('data-selected')
       })
       option.setAttribute('data-selected', 'true')

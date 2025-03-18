@@ -1,0 +1,24 @@
+.group-join {
+  @apply inline-flex;
+
+  > * {
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    &:first-child {
+      @apply !rounded-l-[6px];
+    }
+
+    &:last-child {
+      @apply !rounded-r-[6px];
+    }
+
+    &:not(:first-child) {
+      margin-left: -1px !important;
+    }
+
+    &:not(:disabled):hover {
+      z-index: 2;
+    }
+  }
+}
